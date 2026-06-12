@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font family: ;Quicksand,'Segoe UI',snas-serif;
+
+}
+body{
+    background: linear-gradient(135deg,#f3eaff 0%,#fdf2fb 100%);
+    color: #3c2e52;
+    display: flex;
+    justify-content: center;
+    padding: 40px 16px;
+    min-height: 100vh;
+
+}
+.container{
+    width: 100%;
+    max-width: 480px;
+}
+h1{
+    text-align: center;
+    margin-bottom: 8px;
+    color: #6b4ea8;
+    font-size:700px;
+    letter-spacing: 0.5px;
+
+}
+.subtitle{
+    text-align: center;
+    color: #a78bd1;
+    font-size: 14px;
+    margin-bottom: 28px;
+    
+}
+.note-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 28px;
+}
+
+.note-form input[type="text"] {
+    flex: 1;
+    padding: 14px 18px;
+    border: 2px solid #e3d4f8;
+    border-radius: 24px;
+    font-size: 15px;
+    background: #fff;
+    color: #3c2e52;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.note-form input[type="text"]:focus {
+    border-color: #b794f4;
+}
+
+.note-form input[type="text"]::placeholder {
+    color: #c4b5e0;
+}
+.note-form button {
+    padding: 14px 24px;
+    border: none;
+    border-radius: 24px;
+    background: linear-gradient(135deg, #b794f4 0%, #9f7aea 100%);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.15s;
+    box-shadow: 0 4px 12px rgba(159, 122, 234, 0.35);
+}
+
+.note-form button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(159, 122, 234, 0.45);
+}
+
+.notes-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.note-card {
+    background: #fff;
+    padding: 16px 20px;
+    border-radius: 18px;
+    box-shadow: 0 2px 10px rgba(183, 148, 244, 0.15);
+    border-left: 5px solid #c9a9f5;
+    word-wrap: break-word;
+    font-size: 15px;
+    color: #4a3a6b;
+}
+
+.empty-state {
+    text-align: center;
+    color: #c4b5e0;
+    font-style: italic;
+    margin-top: 30px;
+    font-size: 14px;
+}

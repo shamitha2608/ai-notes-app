@@ -1,14 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>AI Notes</title>
-
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width ,initial-scale=1.0">
+        <title>NOTES WITH AI</title>
+        <link rel="stylesheet" href="{{url_for('static',filename='css.style.css')}}">
     </head>
     <body>
-        <h1>Welcome to AI Notes</h1>
-        <p>This is a simple note-taking application powered by AI.</p>
-        <input type=""text" placeholder="Enter your note here...">
-        <button>Add note</button>
+        <div class="container">
+            <h1>NOTES WITH AI ✨</h1>
+            <p class="subtitle">Your thoughts, beautifully organized</p>
+            <form class="note-form" action="/add" method="POST">
+                <input type="text" name="note" placeholder="Write a note.."required>
+                <button type="submit">ADD</button>
+            </form>
+            {%if notes %}
+            <ul class="note-list">
+                {%for note in notes %}
+                <li class="note-card">
+                    {{note}}    
+                </li>
+                {%endfor%}
+            </ul>
+            {%else%}
+            <p class="empty-state">No notes yet. Add ypur first one above! 💭</p>
+            {%endif%}
+         
+        </div>
     </body>
     
 </html>
