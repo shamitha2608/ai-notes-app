@@ -77,11 +77,11 @@ h1{
     box-shadow: 0 6px 16px rgba(159, 122, 234, 0.45);
 }
 
-.notes-list {
+.note-list {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 16px;
 }
 .note-card {
     background: #fff;
